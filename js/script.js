@@ -30,6 +30,13 @@ const produtos = [
         preco:60.10,
         qtd:0,
         src:"imgs/calcaImg.jpg"
+    },
+    {
+        id:3,
+        nome:"Blusa",
+        preco:60.10,
+        qtd:0,
+        src:"imgs/blusaImg.jpg"
     }
 ]
 
