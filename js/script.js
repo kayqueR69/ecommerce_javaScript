@@ -34,7 +34,7 @@ const produtos = [
     {
         id:3,
         nome:"Blusa",
-        preco:60.10,
+        preco:59.15,
         qtd:0,
         src:"imgs/blusaImg.jpg"
     }
