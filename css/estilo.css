@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lilita One, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 222, 222);
+}
+header{
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+}
+
+#lupa{
+    font-size: xx-large;
+    margin-right: 10px;
+}
+
+#search {
+    width: 300px;
+    height: 40px;
+    padding-inline: 10px;
+    margin-inline: 10px;
+    outline: unset;
+    border-top: none;
+    border-inline: none;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+}
+
+#search:hover{
+    background-color: rgb(219, 217, 217);
+}
+
+#btnCart {
+    width: 50px;
+    height: 40px;
+    font-size: x-large;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    margin-right: 50px;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+.containerProd {
+    display: inline-flex;
+    height: 250px;
+    width: 180px;
+    margin: 10px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.btns{
+    display: flex;
+    width: 100%;
+}
+
+.nome{
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+.preco, .addtocart{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addtocart{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.preco {
+    background-color: orange;
+    color: white;
+}
+
+.main {
+    width: 100%;
+}
+
+aside{
+    background-color: white;
+    height: 34.6rem;
+    min-width: 80%;
+    margin: 20px;
+    position: absolute;
+    display: none;
+    padding: 10px;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#close {
+    height: 40px;
+    width: 40px;
+    font-size: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#container {
+    width: 99%;
+    height: 320px;
+    background-color: gray;
+    overflow: auto;
+}
+
+.prodInCart {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.nomeIncart {
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 10px;
+    font-size: 90%;
+    background-color: black;
+    color: white;
+    border-block: 1px solid white;
+}
+
+.precoIncart {
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 90%;
+    background-color: orange;
+    color: white;
+    border-block: 1px solid black;
+}
+
+.qtdInCart {
+    width: 10%;
+    height: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.botaoRemover {
+    height: 40px;
+    width: 30%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+#areaTotal {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#titulototal {
+    margin-right: 30px;
+}
+
+#finalizar {
+    width: 60%;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    background-color: red;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#finalizar:hover{
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+
+h1 {
+    height: 60px;
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    background-color: gray;
+    color: white;
+}
+
+.imgprod {
+    width: 80%;
+    padding-top: 10px;
+}
