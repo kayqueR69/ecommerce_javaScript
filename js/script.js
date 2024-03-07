@@ -98,6 +98,10 @@ btnpsq.addEventListener('click', function () {
                 area.innerHTML = 'produto não encontrado'
 
                 area.innerHTML += stringBtn
+
+                area.style.display = 'flex'
+                area.style.flexDirection = 'column'
+                area.style.alignItems = 'center'
             }
         }
     }
