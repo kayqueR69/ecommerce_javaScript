@@ -5,6 +5,8 @@ const btnCart = document.querySelector('#btnCart')
 const cart = document.querySelector('#cart')
 const fechar = document.querySelector('#close')
 const total = document.querySelector('#precoTotal')
+const pesquisa = document.querySelector('#search')
+const btnpsq = document.querySelector('#lupa')
 precoTotal = 0;
 
 // -----------------------------------------------------------

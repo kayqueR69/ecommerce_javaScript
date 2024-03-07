@@ -27,13 +27,16 @@ header{
 #lupa{
     font-size: xx-large;
     margin-right: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 
 #search {
     width: 300px;
     height: 40px;
     padding-inline: 10px;
-    margin-inline: 10px;
+    margin-right: 20px;
     outline: unset;
     border-top: none;
     border-inline: none;
@@ -53,7 +56,7 @@ header{
     cursor: pointer;
     background-color: black;
     color: white;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 section {
