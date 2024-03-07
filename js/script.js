@@ -9,6 +9,11 @@ const pesquisa = document.querySelector('#search')
 const btnpsq = document.querySelector('#lupa')
 precoTotal = 0;
 
+const stringBtn = `<button id="voltar" onclick="voltarParaHome()">
+    voltar para pagina inicial
+</button>
+`
+
 // -----------------------------------------------------------
 
 const produtos = [
@@ -42,27 +47,68 @@ const produtos = [
     }
 ]
 
-// adicionar produtos
-
-for (let c = 0; c < produtos.length; c++){
+function printarProd(id,src,nome,preco){
     area.innerHTML += `
-        <div id="produto${produtos[c].id}" class="containerProd" onfocus="">
-            <img src="${produtos[c].src}" alt="exemplo de imagem" class="imgprod">
+        <div id="produto${id}" class="containerProd">
+            <img src="${src}" alt="exemplo de imagem" class="imgprod">
 
             <div class="nome">
-                ${produtos[c].nome}
+                ${nome}
             </div>
             <div class="btns">
                 <div class="preco">
-                    ${produtos[c].preco.toFixed(2)} R$
+                    ${preco.toFixed(2)} R$
                 </div>
-                <button class="addtocart" >
+                <button class="addtocart" onclick="adicionarAoCart(${id})">
                     <i class="bi bi-basket"></i>
                 </button>
             </div>
         </div>
     `
 }
+
+// adicionar produtos
+
+for (let c = 0; c < produtos.length; c++){
+    printarProd(produtos[c].id ,produtos[c].src ,produtos[c].nome ,produtos[c].preco)
+}
+
+// funcionalidades barra de pesquisa
+
+btnpsq.addEventListener('click', function () {
+
+    if (pesquisa.value != ''){
+
+        for (let c = 0; c < produtos.length; c++){
+
+            if (pesquisa.value.toUpperCase().trim() == produtos[c].nome.toUpperCase().trim()){
+                area.innerHTML = ''
+
+                printarProd(produtos[c].id ,produtos[c].src ,produtos[c].nome , produtos[c].preco)
+
+                area.innerHTML += stringBtn
+
+                area.style.display = 'flex'
+                area.style.flexDirection = 'column'
+                area.style.alignItems = 'center'
+
+            }
+        }
+    }
+})
+
+function voltarParaHome(){
+
+    area.innerHTML = ''
+    for (let c = 0; c < produtos.length; c++){
+        printarProd(produtos[c].id ,produtos[c].src ,produtos[c].nome , produtos[c].preco)
+
+        area.style.display = 'block'
+
+        pesquisa.value = ''
+    }
+}
+
 
 // funcionalidades carrinho
 
@@ -78,23 +124,19 @@ fechar.addEventListener('click', function () {
 
 // botão adicionar
 
-const btnAddCart = document.querySelectorAll('.addtocart')
 const containerCart = document.querySelector('#container')
 
-for (let c = 0; c < btnAddCart.length; c++){
-    btnAddCart[c].addEventListener('click', function() {
 
-        produtos[c].qtd += 1
-        mostraNoCarrinho(produtos[c])
+function adicionarAoCart(c){
+    produtos[c].qtd += 1
+    mostraNoCarrinho(produtos[c])
 
-        // cauculo do total da compra
+    // cauculo do total da compra
 
-        precoTotal += produtos[c].preco
-        total.innerHTML = precoTotal.toFixed(2)
+    precoTotal += produtos[c].preco
+    total.innerHTML = precoTotal.toFixed(2)
 
-        // ---------------------------------------------
-
-    })
+    // ---------------------------------------------
 }
 
 // mostrar no carrinho
