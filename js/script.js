@@ -92,9 +92,16 @@ btnpsq.addEventListener('click', function () {
                 area.style.flexDirection = 'column'
                 area.style.alignItems = 'center'
 
+                break;
+
+            } else {
+                area.innerHTML = 'produto não encontrado'
+
+                area.innerHTML += stringBtn
             }
         }
     }
+
 })
 
 function voltarParaHome(){
